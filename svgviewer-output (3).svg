@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="500" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#212529">PhishFight++ Architecture</text>
+  
+  <!-- PhishGen Box -->
+  <rect x="100" y="100" width="250" height="300" rx="10" ry="10" fill="#e9ecef" stroke="#212529" stroke-width="2" />
+  <text x="225" y="130" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#212529">PhishGen</text>
+  <text x="225" y="155" font-family="Arial" font-size="14" text-anchor="middle" font-style="italic" fill="#495057">Phishing Email Generator</text>
+  
+  <!-- PhishGen Components -->
+  <rect x="120" y="180" width="210" height="40" rx="5" ry="5" fill="#6c757d" stroke="#212529" stroke-width="1" />
+  <text x="225" y="205" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Language Models</text>
+  <text x="225" y="237" font-family="Arial" font-size="12" text-anchor="middle" fill="#495057">(GPT-2, T5)</text>
+  
+  <rect x="120" y="240" width="100" height="40" rx="5" ry="5" fill="#6c757d" stroke="#212529" stroke-width="1" />
+  <text x="170" y="265" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Attack Types</text>
+  
+  <rect x="230" y="240" width="100" height="40" rx="5" ry="5" fill="#6c757d" stroke="#212529" stroke-width="1" />
+  <text x="280" y="265" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Themes</text>
+  
+  <rect x="120" y="300" width="210" height="40" rx="5" ry="5" fill="#6c757d" stroke="#212529" stroke-width="1" />
+  <text x="225" y="325" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Perturbations</text>
+  
+  <rect x="120" y="350" width="210" height="30" rx="5" ry="5" fill="#adb5bd" stroke="#212529" stroke-width="1" />
+  <text x="225" y="370" font-family="Arial" font-size="12" text-anchor="middle" fill="#212529">Email Generation API</text>
+  
+  <!-- PhishShield Box -->
+  <rect x="450" y="100" width="250" height="300" rx="10" ry="10" fill="#e9ecef" stroke="#212529" stroke-width="2" />
+  <text x="575" y="130" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#212529">PhishShield</text>
+  <text x="575" y="155" font-family="Arial" font-size="14" text-anchor="middle" font-style="italic" fill="#495057">Phishing Email Detector</text>
+  
+  <!-- PhishShield Components -->
+  <rect x="470" y="180" width="210" height="40" rx="5" ry="5" fill="#198754" stroke="#212529" stroke-width="1" />
+  <text x="575" y="205" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Classifier Models</text>
+  <text x="575" y="237" font-family="Arial" font-size="12" text-anchor="middle" fill="#495057">(BERT, DistilBERT)</text>
+  
+  <rect x="470" y="240" width="100" height="40" rx="5" ry="5" fill="#198754" stroke="#212529" stroke-width="1" />
+  <text x="520" y="265" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Ensemble</text>
+  
+  <rect x="580" y="240" width="100" height="40" rx="5" ry="5" fill="#198754" stroke="#212529" stroke-width="1" />
+  <text x="630" y="265" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Explainers</text>
+  
+  <rect x="470" y="300" width="210" height="40" rx="5" ry="5" fill="#198754" stroke="#212529" stroke-width="1" />
+  <text x="575" y="325" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Metrics Evaluation</text>
+  
+  <rect x="470" y="350" width="210" height="30" rx="5" ry="5" fill="#adb5bd" stroke="#212529" stroke-width="1" />
+  <text x="575" y="370" font-family="Arial" font-size="12" text-anchor="middle" fill="#212529">Classification API</text>
+  
+  <!-- Connecting Arrows -->
+  <line x1="350" y1="200" x2="450" y2="200" stroke="#dc3545" stroke-width="3" />
+  <polygon points="445,195 455,200 445,205" fill="#dc3545" />
+  <text x="400" y="190" font-family="Arial" font-size="12" text-anchor="middle" fill="#dc3545">Phishing Emails</text>
+  
+  <line x1="450" y1="250" x2="350" y2="250" stroke="#0d6efd" stroke-width="3" />
+  <polygon points="355,245 345,250 355,255" fill="#0d6efd" />
+  <text x="400" y="270" font-family="Arial" font-size="12" text-anchor="middle" fill="#0d6efd">Feedback (RL)</text>
+  
+  <!-- Web UI Box -->
+  <rect x="100" y="430" width="600" height="50" rx="5" ry="5" fill="#ced4da" stroke="#212529" stroke-width="2" />
+  <text x="400" y="460" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#212529">Interactive Web Demo (Gradio UI)</text>
+  
+  <!-- UI connections -->
+  <line x1="225" y1="430" x2="225" y2="400" stroke="#212529" stroke-width="2" stroke-dasharray="5,5" />
+  <line x1="575" y1="430" x2="575" y2="400" stroke="#212529" stroke-width="2" stroke-dasharray="5,5" />
+  
+  <!-- Adversarial Training Loop -->
+  <path d="M 350 320 C 400 320 400 350 400 370 C 400 390 400 420 350 420" fill="none" stroke="#fd7e14" stroke-width="2" stroke-dasharray="5,5" />
+  <path d="M 450 320 C 400 320 400 350 400 370 C 400 390 400 420 450 420" fill="none" stroke="#fd7e14" stroke-width="2" stroke-dasharray="5,5" />
+  <text x="400" y="390" font-family="Arial" font-size="12" text-anchor="middle" fill="#fd7e14">Adversarial Training Loop</text>
+  
+  <!-- Legend -->
+  <rect x="650" y="20" width="130" height="60" rx="5" ry="5" fill="white" stroke="#212529" stroke-width="1" />
+  <rect x="660" y="30" width="15" height="15" fill="#6c757d" />
+  <text x="680" y="42" font-family="Arial" font-size="12" fill="#212529">Attacker</text>
+  <rect x="660" y="50" width="15" height="15" fill="#198754" />
+  <text x="680" y="62" font-family="Arial" font-size="12" fill="#212529">Defender</text>
+</svg>
